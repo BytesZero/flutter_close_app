@@ -27,7 +27,7 @@
 
 ## 截图
 
-![](example/images/example.gif)
+![](https://github.com/yy1300326388/flutter_close_app/raw/master/example/images/example.gif)
 
 ## 使用
 
