@@ -21,9 +21,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return FlutterCloseAppPage(
       interval: 2,
+      condition: true,
       onCloseFailed: () {
         // The interval is more than 2 seconds, or the return key is pressed for the first time
-        print('onCloseFailed');
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           content: Text('Press again to exit 🎉'),
         ));

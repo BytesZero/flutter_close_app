@@ -8,6 +8,7 @@ class FlutterCloseAppPage extends StatefulWidget {
     Key? key,
     required this.child,
     this.interval = 2,
+    this.condition = true,
     this.onCloseFailed,
   }) : super(key: key);
 
@@ -16,6 +17,9 @@ class FlutterCloseAppPage extends StatefulWidget {
 
   /// The interval in seconds to close the app.
   final int interval;
+
+  /// The custom condition to close the app.
+  final bool condition;
 
   /// The callback when the condition is failed.
   final VoidCallback? onCloseFailed;
@@ -34,7 +38,7 @@ class _FlutterCloseAppPageState extends State<FlutterCloseAppPage> {
           return true;
         }
         int diff = DateTime.now().second - lastTime;
-        if (diff >= 0 && diff <= widget.interval) {
+        if (widget.condition && diff >= 0 && diff <= widget.interval) {
           exit(0);
         } else {
           lastTime = DateTime.now().second;
