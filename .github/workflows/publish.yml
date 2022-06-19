@@ -12,9 +12,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Publish
-        uses: sakebook/actions-flutter-pub-publisher@v1.3.1
+        uses: sakebook/actions-flutter-pub-publisher@v1.4.0
         with:
-          credential: ${{ secrets.PUB_OAUTH_ACCESS_TOKEN }}
+          credential: ${{ secrets.CREDENTIAL_JSON }}
           flutter_package: true
           skip_test: false
           dry_run: false
