@@ -1,6 +1,6 @@
 name: flutter_close_app
-description: A new flutter plugin project.
-version: 0.0.1
+description: 一款灵活的 Flutter 关闭 App 插件，包含Android 按2次返回关闭，MacOS、iOS、Windows、Linux 一键关闭）
+version: 1.0.0
 homepage: https://github.com/yy1300326388/flutter_close_app
 
 environment:
