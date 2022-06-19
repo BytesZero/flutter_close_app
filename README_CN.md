@@ -1,53 +1,52 @@
 <p align="center">
-<h2 align="center">A simple and flexible Flutter close app plugin</h2>
+<h2 align="center">一款简单灵活的 Flutter 关闭 App 插件</h2>
 
-<h4 align="center">(Android press 2 times to return to close, MacOS, iOS, Windows, Linux one-click close)</h4>
+<h4 align="center">（Android 按2次返回关闭，MacOS、iOS、Windows、Linux 一键关闭）</h4>
 </p>
 <p align="center">
 <a href="https://pub.dev/packages/flutter_close_app"><img src=https://img.shields.io/badge/pub-v1.0.0-success></a>
 <a href="https://github.com/yy1300326388/flutter_close_app"><img src=https://img.shields.io/badge/platform-Android%20%7C%20iOS%20%7C%20MacOS%20%7C%20Windows%20%7C%20Linux-brightgreen></a>
 <a href="https://github.com/yy1300326388/flutter_close_app/actions/workflows/flutter.yml"><img src="https://github.com/yy1300326388/flutter_close_app/actions/workflows/flutter.yml/badge.svg"></a>
 <a href="https://github.com/yy1300326388/flutter_close_app"><img src=https://img.shields.io/github/stars/yy1300326388/flutter_close_app?color=brightgreen></a>
-<a href="https://github.com/yy1300326388/flutter_close_app/blob/master/LICENSE"><img src=https://img.shields.io/badge/license-MIT-brightgreen></a>
+<a href="https://github.com/yy1300326388/flutter_close_app/blob/develop/LICENSE"><img src=https://img.shields.io/badge/license-MIT-brightgreen></a>
 </p>
 
-- [中文说明](https://github.com/yy1300326388/flutter_close_app/tree/master/README_CN.md)
+- [English](https://github.com/yy1300326388/flutter_close_app)
 
-## Feature
+## 功能
+- ✅ 按 2 次返回关闭 App
+    - ✅ 自定义时间间隔
+    - ✅ 自定义提示信息
+    - ✅ 自定义匹配条件
+    - ✅ 支持 Android
+- ✅ 一键关闭 App
+    - ✅ 支持 iOS
+    - ✅ 支持 MacOS
+    - ✅ 支持 Windows
+    - ✅ 支持 Linux
 
-- ✅ Press back 2 times to close app
-     - ✅ Custom time interval
-     - ✅ Customize the prompt message
-     - ✅ Customize matching conditions
-     - ✅ Support Android
-- ✅ One click to close app
-     - ✅ Support iOS
-     - ✅ Support MacOS
-     - ✅ Support Windows
-     - ✅ Support Linux
+## 使用
 
-## Use
-
-- Dependent
+- 依赖
 
 ``` shell
 flutter pub add flutter_close_app
 ```
-- Or
+- 或
 
 ``` ymal
 dependencies:
   flutter_close_app: ^1.0.0
 ```
 
-- Import package
+- 导入包
 ``` dart
 import 'package:flutter_close_app/flutter_close_app.dart';
 ```
 
-## Example
+## 例子
 
-- Press back 2 times to close app
+- 按 2 次返回关闭 App
 
 ``` dart
 class HomePage extends StatelessWidget {
@@ -57,7 +56,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return FlutterCloseAppPage(
       onCloseFailed: () {
-        // Condition does not match: the first press or the second press interval is more than 2 seconds, display a prompt message
+        // 条件不匹配：第一次按下或第二次按下间隔大于 2 秒，显示提示信息
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           content: Text('Press again to exit 🎉'),
         ));
@@ -71,13 +70,13 @@ class HomePage extends StatelessWidget {
 }
 ```
 
-- One click to close app
+- 一键关闭 App
 
 ``` dart
 FlutterCloseApp.close();
 ```
 
-- Advanced usage
+- 高级用法
 
 ``` dart
 class HomePage extends StatelessWidget {
@@ -86,12 +85,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlutterCloseAppPage(
-+      interval: 3, // Custom interval is 3 seconds
-+      condition: tabIndex == 0, // Only close the app on the home page
++      interval: 3, // 自定义间隔为3秒
++      condition: tabIndex == 0, // 仅仅是在首页才关闭 App
       onCloseFailed: () {
-        // Not the homepage does not prompt
+        // 不是首页不提示
 +        if(tabIndex != 0) return;
-        // Condition does not match: the first press or the second press interval is more than 2 seconds, display a prompt message
+        // 条件不匹配：第一次按下或第二次按下间隔大于 2 秒
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           content: Text('Press again to exit 🎉'),
         ));
@@ -105,9 +104,9 @@ class HomePage extends StatelessWidget {
 }
 ```
 
-## Issues and feedback
+## 问题和反馈
 
-Please file [issues](https://github.com/yy1300326388/flutter_close_app/issues) to send feedback or report a bug. Thank you!
+请在[这里](https://github.com/yy1300326388/flutter_close_app/issues)提交反馈或报告错误。 谢谢！
 
 ## LICENSE
 
