@@ -25,6 +25,10 @@
      - ✅ Support MacOS
      - ✅ Support Windows
      - ✅ Support Linux
+## Screenshot
+
+![](example/images/example.gif)
+
 
 ## Use
 

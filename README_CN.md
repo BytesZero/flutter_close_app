@@ -25,6 +25,10 @@
     - ✅ 支持 Windows
     - ✅ 支持 Linux
 
+## 截图
+
+![](example/images/example.gif)
+
 ## 使用
 
 - 依赖
